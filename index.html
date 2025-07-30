@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>My Resume</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     html, body {
       margin: 0;
@@ -10,24 +11,50 @@
       height: 100%;
       font-family: sans-serif;
     }
-    .pdf-container {
+
+    .container {
       width: 100%;
       height: 100vh;
     }
-    .fallback {
-      padding: 2em;
+
+    .download-button {
       text-align: center;
+      margin: 10px;
+    }
+
+    iframe, embed {
+      width: 100%;
+      height: 100vh;
+      border: none;
     }
   </style>
 </head>
 <body>
-  <div class="pdf-container">
-    <embed src="resume.pdf" type="application/pdf" width="100%" height="100%">
-      <div class="fallback">
-        <p>Your browser does not support viewing PDFs directly.</p>
-        <a href="resume.pdf" download>Click here to download the resume</a>
-      </div>
-    </embed>
+  <div class="download-button">
+    <a href="resume.pdf" download>📄 Download Resume (Hyperlinks Supported)</a>
   </div>
+
+  <div class="container" id="viewer">
+    <!-- JS will inject viewer here -->
+  </div>
+
+  <script>
+    // Detect if the user is on a mobile device
+    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+
+    const viewerDiv = document.getElementById("viewer");
+
+    if (isMobile) {
+      // Use Google Docs Viewer for mobile (hyperlinks work)
+      viewerDiv.innerHTML = `
+        <iframe src="https://docs.google.com/gview?url=https://ts1121.github.io/resume-site/resume.pdf&embedded=true"></iframe>
+      `;
+    } else {
+      // Use fast native embed on desktop
+      viewerDiv.innerHTML = `
+        <embed src="resume.pdf" type="application/pdf">
+      `;
+    }
+  </script>
 </body>
 </html>
