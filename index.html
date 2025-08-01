@@ -1,60 +1,206 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 <head>
-  <meta charset="UTF-8">
-  <title>My Resume</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <style>
-    html, body {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      font-family: sans-serif;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Talha Siddique | Personal Website</title>
 
-    .container {
-      width: 100%;
-      height: 100vh;
-    }
-
-    .download-button {
-      text-align: center;
-      margin: 10px;
-    }
-
-    iframe, embed {
-      width: 100%;
-      height: 100vh;
-      border: none;
-    }
-  </style>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Typed.js -->
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <div class="download-button">
-    <a href="resume.pdf" download>📄 Download Resume (Hyperlinks Supported)</a>
-  </div>
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top shadow-sm border-bottom border-success">
+    <div class="container">
+      <a class="navbar-brand fw-bold text-neon" href="#">Talha Siddique</a>
+      <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav me-3">
+          <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+          <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+          <li class="nav-item"><a class="nav-link" href="#publications">Publications</a></li>
+          <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+          <li class="nav-item"><a class="nav-link" href="#misc">Misc</a></li>
+          <li class="nav-item"><a class="nav-link" href="#downloads">CV/Resume</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-  <div class="container" id="viewer">
-    <!-- JS will inject viewer here -->
-  </div>
+  <main class="container" style="margin-top: 120px;">
+    <section id="about" class="section">
+      <h2><span id="type-about" class="typed" data-text="About Me">About Me</span></h2>
+      <div class="row align-items-center mt-3">
+        <div class="col-md-3"><img src="assets/profilepic.jpg" class="img-fluid rounded-circle shadow" alt="Profile Photo" /></div>
+        <div class="col-md-9"><p>
+  Hello! I'm Talha Siddique.</br><br> I work at the intersection of remote sensing, embedded systems, and machine learning, with a focus on building intelligent systems that operate reliably on low-power, resource-constrained hardware. Currently, I’m working as a postdoctoral research associate, where I’m involved in three distinct projects: autonomous path planning for unmanned surface vehicles (USVs); semantic and spatial reasoning over electronic navigation charts (ENCs) using large language models (LLMs); real-time bathymetric data processing pipelines.
+  Previously, my Ph.D. research focused on building a machine learning-enabled magnetometer system for real-time space weather prediction. With a background that combines computer science and computational economics, I aim to bring a cross-disciplinary approach to solving complex problems.</br><br>Outside of work, I’m an avid fan of motorsports—particularly Formula 1—and also a follower of mixed martial arts.
+          
+</p>
+</div>
+      </div>
+    </section>
+    <section id="education" class="section">
+      <h2><span id="type-education" class="typed" data-text="Education">Education</span></h2>
+      <ul class="mt-3"><li>Ph.D., Electrical and Computer Engineering — University of New Hampshire, Durham, NH (Aug 2019 – Jan 2025)</li><li>M.S., Environmental Economics — University of New Hampshire, Durham, NH (Aug 2017 – Jul 2019)</li><li>B.Sc., Computer Science — BRAC University, Dhaka, Bangladesh (Sep 2012 – Dec 2016)</li></ul>
+    </section>
+    <section id="experience" class="section">
+      <h2><span id="type-experience" class="typed" data-text="Professional Experience">Professional Experience</span></h2>
+<h3>Center for Coastal and Ocean Mapping / NOAA-UNH Joint Hydrographic Center</h3>
+<p><em>Durham, NH | Feb 2025 – Present</em><br>
+<strong>Postdoctoral Research Associate</strong><br>
+Supervisor: <a href="https://www.ccom.unh.edu/person/brian-calder" target="_blank">Dr. Brian Calder</a></p>
+<ul>
+  <li>Conduct independent research focused on integrating robust machine learning models with seafloor acoustic data to investigate environmental variability, including real-time processing.</li>
+  <li>Leverage expertise in signal processing and remote sensing to develop innovative tools for analyzing seafloor scatter and sediment properties.</li>
+  <li>Collaborate with the CCOM team and external partners to enhance research outcomes and integrate advanced data modeling approaches.</li>
+  <li>Assist with the preparation of annual progress reports, conference papers, and journal articles.</li>
+</ul>
 
-  <script>
-    // Detect if the user is on a mobile device
-    const isMobile = /Mobi|Android|iPhone|iPad|iPod/i.test(navigator.userAgent);
+<h3>University of New Hampshire — Remote Sensing Lab</h3>
+<p><em>Durham, NH | Aug 2020 – Jan 2025</em><br>
+<strong>Ph.D. Research Assistant</strong><br>
+Advisor: <a href="https://ceps.unh.edu/person/md-shaad-mahmud" target="_blank">Dr. MD Shaad Mahmud</a></p>
+<ul>
+  <li>Developed a ML-enabled magnetometer system aimed at predicting geomagnetically induced currents (GIC).</li>
+  <li>Reduced setup and operational costs to under $100, compared to the standard $3000 fluxgate magnetometers, by enabling real-time baseline correction without year-long data accumulation.</li>
+  <li>Engineered and deployed embedded ML models using TensorFlow Lite on microcontrollers like the Raspberry Pi 2040; implemented custom loss functions and optimization algorithms for robust on-device inference.</li>
+  <li>Explored various Bayesian deep learning architectures for uncertainty quantification using TensorFlow and PyTorch.</li>
+  <li>Authored and led multiple peer-reviewed journal and conference publications, including those in IEEE.</li>
+  <li>Contributed to a National Science Foundation (NSF)-funded project at the intersection of machine learning and space weather prediction.</li>
+</ul>
 
-    const viewerDiv = document.getElementById("viewer");
+<h3>University of New Hampshire — Department of Computer Science</h3>
+<p><em>Durham, NH | Aug 2019 – Jul 2020</em><br>
+<strong>Teaching Assistant</strong></p>
+<ul>
+  <li>Facilitated undergraduate programming lab courses in “Introduction to Java I” and “Introduction to Java II,” supporting ~20 students per section.</li>
+  <li>Designed and led tutorial sessions focused on enhancing student understanding of Java programming fundamentals.</li>
+  <li>Evaluated and graded programming assignments while providing constructive feedback.</li>
+</ul>
 
-    if (isMobile) {
-      // Use Google Docs Viewer for mobile (hyperlinks work)
-      viewerDiv.innerHTML = `
-        <iframe src="https://docs.google.com/gview?url=https://ts1121.github.io/resume-site/resume.pdf&embedded=true"></iframe>
-      `;
-    } else {
-      // Use fast native embed on desktop
-      viewerDiv.innerHTML = `
-        <embed src="resume.pdf" type="application/pdf">
-      `;
-    }
-  </script>
+<h3>University of New Hampshire — Bioeconomics Lab & Artificial Intelligence Group</h3>
+<p><em>Durham, NH | Aug 2017 – Jul 2019</em><br>
+<strong>M.S. Research Assistant</strong><br>
+Advisors: 
+<a href="https://ace.illinois.edu/directory/satallah" target="_blank">Dr. Shadi Atallah</a> and 
+<a href="https://marek.petrik.us/" target="_blank">Dr. Marek Petrik</a></p>
+<ul>
+  <li>Developed environmental strategies using reinforcement learning in R to optimize pest control policies.</li>
+  <li>Applied Bayesian statistics to manage uncertainties in ecological decision-making environments.</li>
+  <li>Built an agent-based model platform to simulate real-world agricultural environments.</li>
+  <li>Presented research findings at academic conferences and reviewed related literature.</li>
+  <li>Contributed to a USDA-funded collaborative project, building a machine learning-enabled agricultural decision support tool.</li>
+</ul>
+
+    </section>
+    <section id="publications" class="section">
+      <h2><span id="type-publications" class="typed" data-text="Publications and Oral Presentations">Publications and Oral Presentations</span></h2>
+      <h4>Peer-Reviewed Journal Papers</h4>
+<ul>
+  <li>T. Siddique and M. S. Mahmud, “Physics-Enhanced TinyML for Real-Time Detection of Ground Magnetic Anomalies,” <em>IEEE Access</em>, vol. 12, pp. 25372–25384, 2024. <a href="https://doi.org/10.1109/ACCESS.2024.3362346" target="_blank">doi:10.1109/ACCESS.2024.3362346</a></li>
+  <li>T. Siddique and M. S. Mahmud, “Ensemble deep learning models for prediction and uncertainty quantification of ground magnetic perturbation,” <em>Frontiers in Astronomy and Space Sciences</em>, vol. 9, 2022. <a href="https://doi.org/10.3389/fspas.2022.1031407" target="_blank">doi:10.3389/fspas.2022.1031407</a></li>
+  <li>T. Siddique, M. S. Mahmud, A. M. Keesee, C. M. Ngwira, and H. Connor, “A survey of uncertainty quantification in machine learning for space weather prediction,” <em>Geosciences</em>, vol. 12, no. 1, Article 27, 2022. <a href="https://doi.org/10.3390/geosciences12010027" target="_blank">doi:10.3390/geosciences12010027</a></li>
+</ul>
+
+<h4>Peer-Reviewed Conference Papers</h4>
+<ul>
+  <li>T. Siddique and M. S. Mahmud, “A Surrogate Tiny Machine Learning Model of Variational Autoencoder for Real-Time Baseline Correction of Magnetometer Data,” <em>2024 International Conference on Computing, Networking and Communications (ICNC)</em>, pp. 579–583, 2024. <a href="https://doi.org/10.1109/ICNC59896.2024.10556237" target="_blank">doi:10.1109/ICNC59896.2024.10556237</a></li>
+  <li>T. Siddique and M. S. Mahmud, “Real-Time Machine Learning Enabled Low-Cost Magnetometer System,” <em>2022 IEEE Sensors</em>, pp. 1–4, 2022. <a href="https://doi.org/10.1109/SENSORS52175.2022.9967170" target="_blank">doi:10.1109/SENSORS52175.2022.9967170</a></li>
+  <li>M. F. Yousuf, T. Siddique, and M. S. Mahmud, “iBUG: AI Enabled IoT Sensing Platform for Real-time Environmental Monitoring,” <em>2022 IEEE 31st Microelectronics Design & Test Symposium (MDTS)</em>, pp. 1–7, 2022. <a href="https://doi.org/10.1109/MDTS54894.2022.9826935" target="_blank">doi:10.1109/MDTS54894.2022.9826935</a></li>
+  <li>T. Siddique and M. S. Mahmud, “Classification of fNIRS Data Under Uncertainty: A Bayesian Neural Network Approach,” <em>2020 IEEE International Conference on E-health Networking, Application & Services (HEALTHCOM)</em>, pp. 1–4, 2021. <a href="https://doi.org/10.1109/HEALTHCOM49281.2021.9398971" target="_blank">doi:10.1109/HEALTHCOM49281.2021.9398971</a></li>
+  <li>T. Siddique, J. L. Hau, S. Atallah, and M. Petrik, “Robust pest management using reinforcement learning,” <em>The Multi-disciplinary Conference on Reinforcement Learning and Decision Making</em>, 2019.</li>
+  <li>T. Siddique, D. Barua, Z. Ferdous, and A. Chakrabarty, “Automated farming prediction,” <em>2017 Intelligent Systems Conference (IntelliSys)</em>, pp. 757–763, 2017. <a href="https://doi.org/10.1109/IntelliSys.2017.8324214" target="_blank">doi:10.1109/IntelliSys.2017.8324214</a></li>
+</ul>
+
+<h4>Workshop / Oral Presentations</h4>
+<ul>
+  <li>T. Siddique and M. S. Mahmud, “Advancing Real-Time GIC Analysis and Prediction with Autonomous Magnetometer Systems Using Machine Learning,” <em>AGU Fall Meeting Abstracts</em>, vol. 2023, NG13B-0606, Dec. 2023.</li>
+  <li>T. Siddique and M. S. Mahmud, “An Array of Low-Cost Machine Learning-Enabled Magnetometer Systems For Real-Time GIC Analysis and Prediction,” <em>AGU Fall Meeting Abstracts</em>, vol. 2022, SM32C-1734, Dec. 2022.</li>
+  <li>T. Siddique and M. S. Mahmud, “A Bayesian Ensemble Machine Learning Approach for Prediction of Geomagnetically Induced Currents (GICs) With Uncertainty Quantification,” <em>Proceedings of the 2nd Machine Learning in Heliophysics Workshop</em>, p. 19, Mar. 2022.</li>
+  <li>T. Siddique, M. S. Mahmud, and A. Keesee, “Uncertainty Quantification and Optimal Time Domain Estimation for Geomagnetic Storm Prediction: A Bayesian Ensemble Machine Learning Approach,” <em>AGU Fall Meeting Abstracts</em>, Dec. 2021.</li>
+  <li>T. Siddique, S. Atallah, and M. Petrik, “A simulation-based machine learning framework for robust pest management policies in an apple orchard,” <em>Northeastern Agricultural and Resource Economics Association (NAREA) Annual Conference</em>, 2019.</li>
+  <li>T. Siddique, S. Atallah, and M. Petrik, “Optimal farm spatial configuration for increased pest resilience: A bio-economic application to apple orchards,” <em>Association of Environmental and Resource Economists (AERE) at Southern Economic Association (SEA) Annual Conference</em>, 2018.</li>
+</ul>
+      <p><em>* For the most up-to-date list of my publications, please visit my 
+<a href="https://scholar.google.com/citations?user=zN-CBUwAAAAJ&hl=en" target="_blank">Google Scholar profile</a>.</em></p>
+
+    </section>
+    <section id="skills" class="section">
+      <h2><span id="type-skills" class="typed" data-text="Skills and Certifications">Skills and Certifications</span></h2>
+      <h4>Technical Skills & Software</h4>
+<p>
+  Python, C/C++, Embedded C/C++, Java, MATLAB, SQL, R, CUDA/GPU, Linux Shell/Bash, Git, LaTeX, AnyLogic, Visual Studio/Eclipse,
+  TensorFlow / TensorFlow Lite / TensorFlow Lite Micro, PyTorch, Jupyter Notebook, Anaconda, Arduino / Raspberry Pi,
+  ARM Processor-Based Microcontroller Unit (MCU) / System-on-Chip (SoC) Programming,
+  Edge / Embedded Machine Learning, TinyML, Deep Learning, Reinforcement Learning,
+  Mathematical Optimization, Algorithm Design, Agent-Based Simulation Modelling, Robot Operating System 2 (ROS2).
+</p>
+
+<h4>Certifications</h4>
+<p>
+  Responsible Conduct of Research and Scholarly Activity Certificate of Training,
+  University of New Hampshire, Durham, NH, USA (2018).
+</p>
+
+    </section>
+    <section id="misc" class="section">
+      <h2><span id="type-misc" class="typed" data-text="Miscellaneous">Miscellaneous</span></h2>
+      <h4>Journal Reviewer</h4>
+<p>
+  IEEE Internet of Things (IoT) Journal; IEEE Access Journal
+</p>
+
+<h4>Student Membership</h4>
+<p>
+  Former Vice President (Administration), Bangladeshi Students’ Association at The University of New Hampshire (BSA UNH)<br>
+  Student Member, American Geophysical Union (AGU)
+</p>
+
+    </section>
+    <section id="downloads" class="section">
+      <h2><span id="type-downloads" class="typed" data-text="Download Resume & CV">Download Resume & CV</span></h2>
+      <div class="download-buttons mt-3">
+        <a href="resume.pdf" class="btn btn-success" download><i class="fas fa-file-alt"></i> Download Resume</a>
+        <a href="cv.pdf" class="btn btn-outline-info" download><i class="fas fa-file-archive"></i> Download Full CV</a>
+      </div>
+    </section>
+    <section id="contact" class="section">
+      <h2><span id="type-contact" class="typed" data-text="Contact">Contact</span></h2>
+      <div class="contact-icons mt-3">
+        <a href="mailto:talhasiddique265@gmail.com" target="_blank" title="Email"><i class="fas fa-envelope"></i></a>
+        <a href="tel:+16036179246" target="_blank" title="Phone"><i class="fas fa-phone"></i></a>
+        <a href="https://www.linkedin.com/in/talhasiddique26/" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ts1121" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+        <a href="https://scholar.google.com/citations?user=zN-CBUwAAAAJ&hl=en" target="_blank" title="Google Scholar"><i class="fas fa-graduation-cap"></i></a>
+      </div>
+    </section>
+  </main>
+
+  <!-- Bootstrap Bundle JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- Custom JS -->
+  <script src="script.js"></script>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+

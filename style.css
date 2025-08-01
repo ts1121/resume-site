@@ -1,0 +1,59 @@
+/* Prevent content jump when scrolling to anchors */
+html {
+  scroll-padding-top: 100px;
+}
+
+/* Global styles */
+body {
+  font-family: 'Fira Code', monospace;
+  background-color: #0f111a;
+  color: #e0e0e0;
+  background-image: url('assets/noise.png');
+  background-size: cover;
+}
+
+/* Section box styling */
+.section {
+  background: #13151e;
+  border: 1px solid #00ff99;
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  box-shadow: 0 0 10px #00ff99;
+}
+
+/* Typed.js heading style */
+.typed {
+  color: #00ff99;
+  font-size: 1.75rem;
+  font-weight: 600;
+}
+
+/* Blinking cursor during typing */
+.typed-cursor {
+  font-weight: bold;
+  color: #00ff99;
+  animation: blink 1s infinite step-start;
+}
+
+/* Blinking animation */
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+/* Contact icons styling */
+.contact-icons a {
+  font-size: 2rem;
+  margin-right: 15px;
+  color: #00ff99;
+}
+
+.contact-icons a:hover {
+  color: #a64eff;
+}
+
+/* Resume & CV buttons */
+.download-buttons .btn {
+  margin-right: 1rem;
+  margin-top: 1rem;
+}
